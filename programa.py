@@ -40,3 +40,21 @@ print (atl1)
 print (atl2)
 print ('Atleta: {}, IMC = {:.2f}'.format(atl1.nombre, atl1.calular_imc()))
 print ('Atleta: {}, IMC = {:.2f}'.format(atl2.nombre, atl2.calular_imc()))
+
+perX = cl.persona("Andrea", 50)
+perX.caminar() #metodo caminar sin argumentos
+print(perX)
+perX.caminar(24) #caminar con argumentos
+print(perX)
+perX.caminar(12, "campo") #metodo caminar con 2 argumento
+print(perX)
+
+atlX = cl.Atleta("Rodrigo", 75)
+print(atlX)
+atlX.estatura=1.73
+print(atlX)
+atlY = cl.Atleta("Ximena",52, 1.60) #constructor con 3 argumentos
+print(atlY)
+print("IMC: {:2f}".format(atlY.calular_imc))
+print("IMC: {:2f}".format(atlX.calular_imc))
+
