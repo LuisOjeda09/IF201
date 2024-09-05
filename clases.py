@@ -46,3 +46,56 @@ class Atleta(persona):
         return self.peso / (self.estatura * self.estatura)
     def __str__(self):
         return 'Atleta (nombre = {}, peso = {}, estatura={})'.format( self.nombre, self.peso, self.estatura)
+    
+    
+"""
+Clase: Persona_parametrizada
+Objetivo: usar parámetros en métodos y constructor para sobrecarga
+Fecha: 05/09/2024
+"""
+class Persona_parametrizada:
+    # Definir el constructor
+    def __init__(self, nombre ="None", peso=None):
+        if nombre:
+            self.nombre = nombre
+        else: 
+            self.nombre = "Desconocido"
+        if peso:
+            self.peso = peso 
+        else: 
+            self.peso = 0
+    def caminar(self, distancia=None, lugar= "ciudad"):
+        if distancia is not None:
+            self.peso -= distancia / 8
+        else:
+            self.peso -= 0.5
+        match (lugar):
+            case "campo":
+                self.peso -= 0.1 
+            case "ciudad":
+                pass
+
+    def __str__(self):
+         return "Persona_parametrizada" "(nombre: {}, peso: {})" .format(self.nombre, self.peso)
+    
+"""
+Clase Empleado
+Atributos: nombre, edad, profesión
+Fecha: 05/09/2024
+"""
+class Empleado: 
+    def __init__(self, nombre="", edad=0, profesión=None):
+        self.nombre = ""
+        self.edad = 0
+        self.profesión = "Desconocida"
+        if nombre:
+            self.nombre = nombre
+        if edad:
+            self.edad = edad
+        if profesión:
+            self.profesión = profesión
+
+    def __str__(self):
+        return "Empleado (nombre:{}, edad: {}, profesión{})".format(self.nombre, self.edad, self.profesión)
+    
+
