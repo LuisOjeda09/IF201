@@ -96,6 +96,6 @@ class Empleado:
             self.profesión = profesión
 
     def __str__(self):
-        return "Empleado (nombre:{}, edad: {}, profesión{})".format(self.nombre, self.edad, self.profesión)
+        return "Empleado (nombre:{}, edad: {}, profesión {})".format(self.nombre, self.edad, self.profesión)
     
 
